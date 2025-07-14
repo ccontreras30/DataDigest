@@ -9,7 +9,7 @@ def generate_plot():
     plt.xlabel("Población")
     plt.title("Top 10 países por población (2020)")
     plt.tight_layout()
-    plt.savefig("output/plots/top10_population.png")
+    plt.savefig("docs/top10_population.png")
     print("Gráfico generado.")
 
 if __name__ == "__main__":
