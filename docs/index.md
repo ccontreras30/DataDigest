@@ -8,5 +8,5 @@ Bienvenido al informe automatizado de población mundial.
 
 Consulta el [informe detallado](/output/reports/report.md).
 
-Prueba [informe detallado](docs/prueba.txt)
+Prueba [informe detallado](prueba.txt)
 
