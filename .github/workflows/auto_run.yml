@@ -1,0 +1,24 @@
+name: Ejecutar DataDigest
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Cada lunes a las 9 AM
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Ejecutar scripts
+        run: |
+          python scripts/scraper.py
+          python scripts/analysis.py
+          python scripts/visualizations.py
+          python scripts/report_generator.py
